@@ -6,6 +6,7 @@ gem 'rails', '4.0.0'
 gem 'thin'
 gem 'devise'
 gem 'turbolinks'
+gem 'haml'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
