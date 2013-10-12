@@ -1,4 +1,6 @@
 SouthSudan::Application.routes.draw do
+  resources :syllabus_items
+
   devise_for :users
-  root :to => "pages#syllabus"
+  root :to => "syllabus_items#index"
 end

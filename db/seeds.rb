@@ -1,7 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+syllabus_item_names = ["Breast", "Cardiology", "Endocrinology", "Ophthalmology", "Psychiatry", "General Practice", "Infectious Diseases", "Anaesthetics", "Dermatology", "Emergency Medicine", "Gastroenterology", "Haematology", "Neurology", "Oncology and palliative care", "Paediatrics", "Radiology", "Renal Medicine", "Respiratory Medicine", "Rheumatology", "Breast", "Opthalmology", "Orthopaedics and trauma", "Obstetrics", "Gynaecology", "Ear nose and throat (ENT)", "Maxillofacial", "Plastic surgery", "Urology", "Cardiothoracic surgery", "Vascular surgery", "Paediatric Surgery", "General surgery", "Anatomy", "Biochemistry", "Pathology", "Physiology", "Histology", "Pharmacology", "Epidemiology", "Statistics", "Embryology", "Sociology", "Immunology and Microbiology", "Ethics and Law", "Examination skills", "Practical procedures"]
+syllabus_item_names.each do |name|
+  SyllabusItem.create(name: name)
+end
