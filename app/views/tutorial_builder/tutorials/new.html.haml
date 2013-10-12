@@ -1,6 +1,6 @@
 %h2 New Tutorial
 
-=form_for @tutorial, html: {class: 'pure-form'} do |f|
+=form_for @tutorial, url: tutorial_builder_tutorials_path, html: {class: 'pure-form'} do |f|
     =f.error_messages
 
     =f.hidden_field :syllabus_item_id

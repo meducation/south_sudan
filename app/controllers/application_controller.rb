@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def check_author
+  def check_author!
     user_signed_in? && current_user.author?
   end
 end

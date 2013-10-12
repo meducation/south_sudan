@@ -8,7 +8,7 @@ class CreateTutorials < ActiveRecord::Migration
       t.integer :syllabus_item_id, null: false
 
       t.timestamps
-      t.datetime :published_at, null: false
+      t.datetime :published_at, null: true
     end
   end
 end

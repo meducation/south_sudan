@@ -1,6 +1,6 @@
-class TutorialsController < ApplicationController
+class TutorialBuilder::TutorialsController < ApplicationController
 
-  before_action :check_author, only: [:new, :create]
+  before_action :check_author!
 
   def new
     @tutorial = Tutorial.new(syllabus_item_id: params[:syllabus_item_id])
@@ -9,7 +9,7 @@ class TutorialsController < ApplicationController
   def create
     @tutorial = current_user.authored_tutorials.build(tutorial_params)
     if @tutorial.save
-      redirect_to new_tutorial_slide_path(@tutorial)
+      redirect_to new_tutorial_builder_tutorial_slide_path(@tutorial)
     else
       render :new
     end

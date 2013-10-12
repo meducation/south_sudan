@@ -1,0 +1,17 @@
+%h2 Tutorial "#{@tutorial.title}"
+
+.pure-g
+    .pure-u-1-4
+        =render "tutorial_builder/tutorials/slides"
+
+    .pure-u-3-4
+        =form_for @slide, url: tutorial_builder_tutorial_slides_path(@tutorial), method: :post, html: {class: 'pure-form'} do |f|
+            %fieldset
+                %legend New Slide
+
+                =f.error_messages
+
+                %p=f.text_field :title, placeholder: "Slide Title"
+                %p=f.text_area :content, placeholder: "Slide Content", style: "width:50%; height:7em"
+
+                =f.submit "Create Slide", class: 'pure-button pure-button-primary'

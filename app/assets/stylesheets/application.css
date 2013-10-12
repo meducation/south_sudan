@@ -16,3 +16,11 @@
   width:1000px;
   margin:0px auto;
 }
+
+.tutorial_builder_side_slide {
+  border:1px solid #ddd;
+  padding:10px;
+  margin-bottom:10px;
+  margin-right:10px;
+  background:lightblue;
+}
