@@ -18,6 +18,7 @@
 }
 
 .tutorial_builder_side_slide {
+  display:block;
   border:1px solid #ddd;
   padding:10px;
   margin-bottom:10px;

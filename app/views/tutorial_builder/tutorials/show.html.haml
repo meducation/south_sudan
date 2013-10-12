@@ -1,0 +1,12 @@
+%h2= @tutorial.title
+
+%p= @tutorial.description
+
+%h3 Slides
+-@tutorial.slides.each do |slide|
+    %ul
+        %li
+            =slide.title
+            =surround "(", ")" do
+                =link_to "Edit", edit_tutorial_builder_tutorial_slide_path(@tutorial, slide)
+=link_to "Add New Slide", new_tutorial_builder_tutorial_slide_path(@tutorial), class: "pure-button pure-button-primary"

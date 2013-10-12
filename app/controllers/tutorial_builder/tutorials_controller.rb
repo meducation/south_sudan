@@ -2,6 +2,10 @@ class TutorialBuilder::TutorialsController < ApplicationController
 
   before_action :check_author!
 
+  def show
+    @tutorial = Tutorial.find(params[:id])
+  end
+
   def new
     @tutorial = Tutorial.new(syllabus_item_id: params[:syllabus_item_id])
   end
@@ -13,7 +17,6 @@ class TutorialBuilder::TutorialsController < ApplicationController
     else
       render :new
     end
-
   end
 
   private

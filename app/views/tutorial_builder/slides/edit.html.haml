@@ -6,5 +6,5 @@
 
     .pure-u-3-4
         =form_for @slide, url: tutorial_builder_tutorial_slides_path(@tutorial), method: :post, html: {class: 'pure-form'} do |f|
-            %legend New Slide
+            %legend Edit Slide
             =render "form", f: f

@@ -1,3 +1,7 @@
 %h2= @syllabus_item.name
 
+%ul
+    - @syllabus_item.tutorials.each do |tutorial|
+        %li= link_to tutorial.title, tutorial
+
 =link_to "New Tutorial", new_tutorial_builder_tutorial_path(syllabus_item_id: @syllabus_item.id)

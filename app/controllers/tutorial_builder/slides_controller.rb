@@ -4,7 +4,11 @@ class TutorialBuilder::SlidesController < ApplicationController
   before_action :find_tutorial
 
   def new
-    @slide = @tutorial.slides.build
+    @slide = Slide.new
+  end
+
+  def edit
+    @slide = @tutorial.slides.find(params[:id])
   end
 
   def create
