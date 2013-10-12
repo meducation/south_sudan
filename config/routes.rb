@@ -1,4 +1,4 @@
 SouthSudan::Application.routes.draw do
   devise_for :users
-  root :to => "home#index"
+  root :to => "pages#syllabus"
 end

@@ -21,11 +21,12 @@ end
 
 group :test, :development do
   gem 'sqlite3'
+  gem 'zeus'
 end
 
 group :test do
   gem 'mocha', require: false
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', "~> 4.0"
 end
 
 group :production do
