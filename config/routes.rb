@@ -1,7 +1,9 @@
 SouthSudan::Application.routes.draw do
 
   resources :syllabus_items, only: [:index, :show]
-  resources :tutorials, only: [:show]
+  resources :tutorials, only: [:show] do
+    resources :slides, only: [:index, :show]
+  end
 
   namespace :tutorial_builder do
     resources :tutorials, except: [:index] do
