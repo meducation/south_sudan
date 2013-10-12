@@ -1,0 +1,11 @@
+%h2 New Tutorial
+
+=form_for @tutorial, html: {class: 'pure-form'} do |f|
+    =f.error_messages
+
+    =f.hidden_field :syllabus_item_id
+
+    %p=f.text_field :title, placeholder: "Tutorial Title"
+    %p=f.text_area :description, placeholder: "What's it about?", style: "width:50%; height:7em"
+
+    =f.submit "Create Tutorial", class: 'pure-button pure-button-primary'

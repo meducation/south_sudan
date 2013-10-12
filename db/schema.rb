@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131012134929) do
+ActiveRecord::Schema.define(version: 20131012140130) do
 
   create_table "syllabus_items", force: true do |t|
     t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tutorials", force: true do |t|
+    t.string   "title",            null: false
+    t.text     "description",      null: false
+    t.integer  "author_id",        null: false
+    t.integer  "syllabus_item_id", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

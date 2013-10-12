@@ -27,6 +27,7 @@ end
 group :test do
   gem 'mocha', require: false
   gem 'factory_girl_rails', "~> 4.0"
+  gem 'database_cleaner', "~> 1.0"
 end
 
 group :production do
