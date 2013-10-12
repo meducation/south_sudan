@@ -25,7 +25,7 @@ end
 
 group :test do
   gem 'mocha', require: false
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
 
 group :production do
